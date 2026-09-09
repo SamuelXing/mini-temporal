@@ -1,0 +1,14 @@
+[package]
+name = "mini-temporal"
+version = "0.1.0"
+edition = "2021"
+description = "A from-scratch durable execution engine, built to understand how Temporal works."
+
+# Phase 0 has ZERO dependencies on purpose. Every piece of the magic is in this
+# repo, in plain std Rust. No async runtime either -- we drive the workflow
+# future by hand, because *how the future is driven* is the whole point.
+[dependencies]
+
+[[example]]
+name = "order_saga"
+path = "examples/order_saga.rs"
